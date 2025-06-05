@@ -12,7 +12,7 @@ const PromotionSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Promoção <span className="text-gradient">Exclusiva</span>
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto text-xl font-normal">Oferta por tempo limitado: Condições especiais para quem assinar contrato de adesão do OneHealth até 30 de Junho de 2025.</p>
+          <p className="text-gray-700 max-w-3xl mx-auto text-xl font-bold">Oferta por tempo limitado: Condições especiais para quem assinar contrato de adesão do OneHealth® até 30 de Junho de 2025.</p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">

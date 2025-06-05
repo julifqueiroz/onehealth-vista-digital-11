@@ -1,53 +1,49 @@
-
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { motion } from 'framer-motion';
 import { Star, Quote, MapPin, Building } from 'lucide-react';
-
-const testimonials = [
-  {
-    name: "Lucas Valões",
-    position: "Gestor",
-    company: "Excel Fórmulas",
-    location: "São Paulo, SP",
-    quote: "A migração para o OneHealth foi praticamente instantânea, garantindo total segurança e integridade das nossas informações. Em poucos dias, já estávamos operando com 100% dos nossos dados preservados!",
-    rating: 5,
-    results: "Migração em 2 dias",
-    avatar: "LV"
-  },
-  {
-    name: "Marcone Ferreira",
-    position: "Proprietário",
-    company: "A Fórmula",
-    location: "Rio de Janeiro, RJ",
-    quote: "Após tentar vários sistemas no mercado, o OneHealth se destacou pela facilidade de uso e recursos específicos para manipulação. O suporte técnico é excepcional.",
-    rating: 5,
-    results: "300% ROI em 6 meses",
-    avatar: "MF"
-  },
-  {
-    name: "Igor Brito",
-    position: "Proprietário",
-    company: "Atrium Farma",
-    location: "Belo Horizonte, MG",
-    quote: "A gestão da farmácia se tornou muito mais prática com o OneHealth. Os indicadores disponibilizados nos dão visibilidade completa do negócio, facilitando a tomada de decisões e melhorando nossos resultados financeiros.",
-    rating: 5,
-    results: "45% aumento vendas",
-    avatar: "IB"
-  }
-];
-
+const testimonials = [{
+  name: "Lucas Valões",
+  position: "Gestor",
+  company: "Excel Fórmulas",
+  location: "São Paulo, SP",
+  quote: "A migração para o OneHealth foi praticamente instantânea, garantindo total segurança e integridade das nossas informações. Em poucos dias, já estávamos operando com 100% dos nossos dados preservados!",
+  rating: 5,
+  results: "Migração em 2 dias",
+  avatar: "LV"
+}, {
+  name: "Marcone Ferreira",
+  position: "Proprietário",
+  company: "A Fórmula",
+  location: "Rio de Janeiro, RJ",
+  quote: "Após tentar vários sistemas no mercado, o OneHealth se destacou pela facilidade de uso e recursos específicos para manipulação. O suporte técnico é excepcional.",
+  rating: 5,
+  results: "300% ROI em 6 meses",
+  avatar: "MF"
+}, {
+  name: "Igor Brito",
+  position: "Proprietário",
+  company: "Atrium Farma",
+  location: "Belo Horizonte, MG",
+  quote: "A gestão da farmácia se tornou muito mais prática com o OneHealth. Os indicadores disponibilizados nos dão visibilidade completa do negócio, facilitando a tomada de decisões e melhorando nossos resultados financeiros.",
+  rating: 5,
+  results: "45% aumento vendas",
+  avatar: "IB"
+}];
 const TestimonialsSection = () => {
-  return (
-    <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-slate-50">
+  return <section id="testimonials" className="py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} viewport={{
+        once: true
+      }} className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-700 rounded-full px-4 py-2 mb-6 text-sm font-medium">
             <Star className="w-4 h-4" />
             Depoimentos Reais
@@ -65,15 +61,18 @@ const TestimonialsSection = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="group"
-            >
+          {testimonials.map((testimonial, index) => <motion.div key={index} initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 0.6,
+          delay: index * 0.2
+        }} viewport={{
+          once: true
+        }} className="group">
               <Card className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm h-full relative overflow-hidden">
                 {/* Background decoration */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-50 to-purple-50 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500"></div>
@@ -106,9 +105,7 @@ const TestimonialsSection = () => {
                   <div className="space-y-4">
                     {/* Rating */}
                     <div className="flex items-center gap-1">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
+                      {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />)}
                     </div>
 
                     {/* Location and Results */}
@@ -124,25 +121,26 @@ const TestimonialsSection = () => {
                   </div>
                 </div>
               </Card>
-            </motion.div>
-          ))}
+            </motion.div>)}
         </div>
 
         {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold mb-8">
-            Junte-se a mais de 500 farmácias que já transformaram seus negócios
-          </h3>
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} whileInView={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.8
+      }} viewport={{
+        once: true
+      }} className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center">
+          <h3 className="text-2xl md:text-3xl font-bold mb-8">Junte-se a mais de 50 farmácias que já transformaram seus negócios</h3>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">50+</div>
               <div className="text-blue-100 text-sm">Farmácias Atendidas</div>
             </div>
             <div>
@@ -160,8 +158,6 @@ const TestimonialsSection = () => {
           </div>
         </motion.div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;

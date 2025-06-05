@@ -82,7 +82,7 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Entre em <span className="text-gradient">Contato</span>
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto">
+          <p className="text-gray-700 max-w-3xl mx-auto font-bold">
             Estamos prontos para ajudar sua farmácia de manipulação a alcançar novos patamares de eficiência e sucesso.
           </p>
         </div>

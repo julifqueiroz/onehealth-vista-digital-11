@@ -114,12 +114,7 @@ const HeroSection = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               
-              <Button size="lg" variant="outline" className="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 font-semibold px-8 py-4 text-lg rounded-xl group" onClick={() => {
-              window.location.href = "#features";
-            }}>
-                <Play className="w-5 h-5 mr-2" />
-                Ver Demonstração
-              </Button>
+              
             </motion.div>
             
             <motion.div initial={{
