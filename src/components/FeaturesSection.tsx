@@ -143,7 +143,7 @@ const FeaturesSection = () => {
               <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-semibold group" onClick={() => {
               window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Quero saber mais sobre a gestão de redes franqueadas no OneHealth", "_blank");
             }}>
-                Saiba Mais sobre Franquias
+                Solicite uma Demonstração
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
