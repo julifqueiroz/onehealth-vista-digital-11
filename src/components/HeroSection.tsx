@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -30,7 +29,7 @@ const HeroSection = () => {
               className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-200 rounded-full px-4 py-2 mb-6 text-sm font-medium text-blue-700"
             >
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              Sistema ERP Líder no Mercado
+              Sistema ERP mais Inovador do Mercado
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
