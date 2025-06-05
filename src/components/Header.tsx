@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,77 +21,151 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  return <header className={cn("fixed top-0 left-0 w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12", scrolled ? "bg-white shadow-md py-3" : "bg-transparent")}>
-      <div className="container mx-auto">
+  const navItems = [
+    { href: "#features", label: "Funcionalidades" },
+    { href: "#benefits", label: "Benefícios" },
+    { href: "#testimonials", label: "Depoimentos" },
+    { href: "#promotion", label: "Promoções" }
+  ];
+
+  return (
+    <motion.header 
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className={cn(
+        "fixed top-0 left-0 w-full z-50 transition-all duration-300",
+        scrolled 
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-3" 
+          : "bg-transparent py-4"
+      )}
+    >
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          {/* Logo */}
+          <motion.div 
+            className="flex items-center"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
             <img 
               src="/lovable-uploads/66fe1e79-9128-48b0-a961-0b278cfe6779.png" 
               alt="OneHealth" 
               className="h-10 md:h-12" 
-              onError={e => {
-                // Fallback to text if logo image fails to load
+              onError={(e) => {
                 e.currentTarget.style.display = 'none';
                 document.getElementById('logo-text')!.style.display = 'block';
               }}
             />
             <div id="logo-text" className="hidden">
-              <span className="font-bold text-2xl">OneHealth</span>
+              <span className="font-bold text-2xl text-slate-800">
+                One<span className="text-red-600">Health</span>
+              </span>
             </div>
-          </div>
+          </motion.div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex gap-6 items-center">
-            <a href="#features" className="text-gray-800 hover:text-onehealth-red transition-colors">Funcionalidades</a>
-            <a href="#benefits" className="text-gray-800 hover:text-onehealth-red transition-colors">Benefícios</a>
-            <a href="#testimonials" className="text-gray-800 hover:text-onehealth-red transition-colors">Depoimentos</a>
-            <a href="#promotion" className="text-gray-800 hover:text-onehealth-red transition-colors">Promoções</a>
+          <nav className="hidden lg:flex gap-8 items-center">
+            {navItems.map((item, index) => (
+              <motion.a
+                key={item.href}
+                href={item.href}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-slate-700 hover:text-blue-600 transition-colors font-medium relative group"
+              >
+                {item.label}
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+              </motion.a>
+            ))}
           </nav>
           
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="p-2">
+          <div className="lg:hidden">
+            <button 
+              onClick={toggleMobileMenu} 
+              className="p-2 text-slate-700 hover:text-blue-600 transition-colors"
+            >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
           
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
-            <Button className="bg-onehealth-red hover:bg-onehealth-darkred transition-colors" onClick={() => {
-              window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
-            }}>
+          {/* Desktop CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <Button 
+              variant="outline"
+              size="sm"
+              className="border-slate-300 text-slate-700 hover:bg-slate-50"
+              onClick={() => {
+                window.open("tel:+5571999341805", "_self");
+              }}
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              (71) 99934-1805
+            </Button>
+            <Button 
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => {
+                window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
+              }}
+            >
               Falar com Consultor
             </Button>
           </div>
         </div>
         
         {/* Mobile Menu */}
-        {mobileMenuOpen && <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
-            <nav className="flex flex-col gap-3">
-              <a href="#features" className="text-gray-800 hover:text-onehealth-red transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
-                Funcionalidades
-              </a>
-              <a href="#benefits" className="text-gray-800 hover:text-onehealth-red transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
-                Benefícios
-              </a>
-              <a href="#testimonials" className="text-gray-800 hover:text-onehealth-red transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
-                Depoimentos
-              </a>
-              <a href="#promotion" className="text-gray-800 hover:text-onehealth-red transition-colors px-4 py-2" onClick={() => setMobileMenuOpen(false)}>
-                Promoções
-              </a>
-              <div className="px-4 pt-2">
-                <Button className="bg-onehealth-red hover:bg-onehealth-darkred transition-colors w-full" onClick={() => {
+        <motion.div
+          initial={false}
+          animate={{
+            height: mobileMenuOpen ? "auto" : 0,
+            opacity: mobileMenuOpen ? 1 : 0
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="lg:hidden overflow-hidden"
+        >
+          <div className="py-4 space-y-4 bg-white/95 backdrop-blur-md rounded-2xl mt-4 shadow-lg border border-slate-200">
+            <nav className="flex flex-col">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors px-6 py-3 font-medium"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+            
+            <div className="px-6 space-y-3">
+              <Button 
+                variant="outline"
+                className="w-full border-slate-300 text-slate-700 hover:bg-slate-50"
+                onClick={() => {
+                  window.open("tel:+5571999341805", "_self");
+                  setMobileMenuOpen(false);
+                }}
+              >
+                <Phone className="w-4 h-4 mr-2" />
+                (71) 99934-1805
+              </Button>
+              <Button 
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold"
+                onClick={() => {
                   window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
                   setMobileMenuOpen(false);
-                }}>
-                  Falar com Consultor
-                </Button>
-              </div>
-            </nav>
-          </div>}
+                }}
+              >
+                Falar com Consultor
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
-    </header>;
+    </motion.header>
+  );
 };
 
 export default Header;
