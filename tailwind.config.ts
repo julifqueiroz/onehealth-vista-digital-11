@@ -121,6 +121,7 @@ export default {
 				"pulse-scale": "pulse-scale 2s ease-in-out infinite"
 			},
 			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
 				'poppins': ['Poppins', 'sans-serif'],
 				'montserrat': ['Montserrat', 'sans-serif']
 			},
