@@ -75,7 +75,7 @@ const HeroSection = () => {
                 <div className="text-sm text-slate-600">Satisfação</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">24/7</div>
+                <div className="text-2xl font-bold text-purple-600">d</div>
                 <div className="text-sm text-slate-600">Suporte</div>
               </div>
             </motion.div>
