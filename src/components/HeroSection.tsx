@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -76,8 +75,8 @@ const HeroSection = () => {
                 <div className="text-sm text-slate-600">Satisfação</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">d</div>
-                <div className="text-sm text-slate-600">Suporte</div>
+                <div className="text-2xl font-bold text-purple-600">100%</div>
+                <div className="text-sm text-slate-600">Sistema Online</div>
               </div>
             </motion.div>
 
