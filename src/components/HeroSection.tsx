@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -91,7 +92,7 @@ const HeroSection = () => {
             delay: 0.5,
             duration: 0.6
           }} className="space-y-3 mb-8">
-              {["Migração gratuita e sem complicações", "Conformidade total com ANVISA", "Suporte técnico especializado 24/7"].map((benefit, index) => <div key={index} className="flex items-center gap-3">
+              {["Migração gratuita e sem complicações", "Conformidade total com ANVISA", "Suporte técnico especializado"].map((benefit, index) => <div key={index} className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-emerald-500" />
                   <span className="text-slate-700">{benefit}</span>
                 </div>)}
