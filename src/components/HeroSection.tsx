@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { motion } from 'framer-motion';
@@ -108,7 +109,7 @@ const HeroSection = () => {
             duration: 0.6
           }} className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group" onClick={() => {
-              window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Quero agendar uma demonstração do OneHealth para minha farmácia de manipulação", "_blank");
+              window.open("https://api.whatsapp.com/send?phone=5571960735200&text=Olá! Quero agendar uma demonstração do OneHealth para minha farmácia de manipulação", "_blank");
             }}>
                 Agendar Demonstração Gratuita
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
