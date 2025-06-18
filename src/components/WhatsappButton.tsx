@@ -6,7 +6,7 @@ const WhatsappButton = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <button 
         onClick={() => {
-          window.open("https://api.whatsapp.com/send?phone=5571960735200&text=Olá! Vi sua divulgação e gostaria de saber mais sobre o OneHealth", "_blank");
+          window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Vi sua divulgação e gostaria de saber mais sobre o OneHealth", "_blank");
         }}
         className="bg-[#25D366] hover:bg-[#1da951] text-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
         aria-label="Contate-nos pelo WhatsApp"
