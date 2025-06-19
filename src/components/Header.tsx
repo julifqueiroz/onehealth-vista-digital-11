@@ -98,16 +98,16 @@ const Header = () => {
               size="sm"
               className="border-slate-300 text-slate-700 hover:bg-slate-50"
               onClick={() => {
-                window.open("tel:+5571999341805", "_self");
+                window.open("tel:+5571996073520", "_self");
               }}
             >
               <Phone className="w-4 h-4 mr-2" />
-              (71) 99934-1805
+              (71) 99607-3520
             </Button>
             <Button 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => {
-                window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
+                window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
               }}
             >
               Falar com Consultor
@@ -144,17 +144,17 @@ const Header = () => {
                 variant="outline"
                 className="w-full border-slate-300 text-slate-700 hover:bg-slate-50"
                 onClick={() => {
-                  window.open("tel:+5571999341805", "_self");
+                  window.open("tel:+5571996073520", "_self");
                   setMobileMenuOpen(false);
                 }}
               >
                 <Phone className="w-4 h-4 mr-2" />
-                (71) 99934-1805
+                (71) 99607-3520
               </Button>
               <Button 
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold"
                 onClick={() => {
-                  window.open("https://api.whatsapp.com/send?phone=5571999341805&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
+                  window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Estou interessado em conhecer o OneHealth para minha farmácia de manipulação", "_blank");
                   setMobileMenuOpen(false);
                 }}
               >

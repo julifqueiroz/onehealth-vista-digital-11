@@ -1,8 +1,11 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
+
 const PromotionSection = () => {
-  return <section id="promotion" className="relative bg-onehealth-gray overflow-hidden py-[50px]">
+  return (
+    <section id="promotion" className="relative bg-onehealth-gray overflow-hidden py-[50px]">
       {/* Background decoration */}
       <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-onehealth-blue opacity-10"></div>
       <div className="absolute bottom-10 -left-10 w-32 h-32 rounded-full bg-onehealth-green opacity-10"></div>
@@ -66,9 +69,12 @@ const PromotionSection = () => {
             </ul>
             
             <div className="mt-auto">
-              <Button className="w-full bg-onehealth-blue hover:bg-onehealth-darkblue transition-colors" onClick={() => {
-              window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Quero aproveitar a promoção especial do OneHealth para minha farmácia", "_blank");
-            }}>
+              <Button 
+                className="w-full bg-onehealth-blue hover:bg-onehealth-darkblue transition-colors" 
+                onClick={() => {
+                  window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Quero aproveitar a promoção especial do OneHealth para minha farmácia", "_blank");
+                }}
+              >
                 Garanta Esta Oferta
               </Button>
             </div>
@@ -114,9 +120,12 @@ const PromotionSection = () => {
             </ul>
             
             <div className="mt-auto">
-              <Button className="w-full bg-onehealth-green hover:opacity-90 transition-colors" onClick={() => {
-              window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Quero participar do programa de indicação do OneHealth", "_blank");
-            }}>
+              <Button 
+                className="w-full bg-onehealth-green hover:opacity-90 transition-colors" 
+                onClick={() => {
+                  window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Quero participar do programa de indicação do OneHealth", "_blank");
+                }}
+              >
                 Participar do Programa
               </Button>
             </div>
@@ -129,6 +138,8 @@ const PromotionSection = () => {
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default PromotionSection;
