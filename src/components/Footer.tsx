@@ -1,8 +1,10 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-onehealth-darkblue text-white pt-16 pb-8 bg-gray-500">
+  return (
+    <footer className="bg-onehealth-darkblue text-white pt-16 pb-8 bg-gray-500">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -56,6 +58,21 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+      
+      {/* Bloco branco com informações da empresa */}
+      <div className="bg-white text-gray-800 py-4 mt-8">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-sm">
+            <p className="mb-1">
+              <strong>CNPJ:</strong> 59.479.613/0001-04
+            </p>
+            <p>
+              <strong>Razão Social:</strong> MINDTECH SOLUTIONS LTDA
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 };
 export default Footer;
