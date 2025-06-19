@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
       
       {/* Bloco branco com informações da empresa */}
-      <div className="bg-white text-gray-800 py-4 mt-8">
+      <div className="bg-white text-gray-600 py-4 mt-8">
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm">
             <p className="mb-1">
