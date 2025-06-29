@@ -41,7 +41,7 @@ const HeroSection = () => {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
               <span className="text-slate-800">Revolucione sua</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-600 via-red-600 to-grey-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Farmácia de Manipulação
               </span>
               <br />
