@@ -15,7 +15,29 @@ const PromotionSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Promoção <span className="text-gradient">Exclusiva</span>
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto text-xl font-bold">Oferta por tempo limitado: Condições especiais para quem assinar contrato de adesão do OneHealth® até 30 de Junho de 2025.</p>
+          <p className="text-gray-700 max-w-3xl mx-auto text-xl font-bold">Oferta por tempo limitado: Condições especiais para quem assinar contrato de adesão do OneHealth® até 30 de Julho de 2025.</p>
+        </div>
+
+        {/* Destaque para a Consulfarma */}
+        <div className="mb-12">
+          <Card className="p-8 shadow-xl border-t-4 border-red-500 relative overflow-hidden bg-gradient-to-r from-red-50 to-orange-50">
+            <div className="absolute top-0 right-0 bg-red-500 text-white px-4 py-1 text-sm font-medium">
+              CONSULFARMA
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-4 text-red-600">
+                🎉 Aproveite 20% de desconto na implantação do sistema OneHealth durante a Consulfarma! 🎉
+              </h3>
+              <Button 
+                className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold text-lg py-4" 
+                onClick={() => {
+                  window.open("https://api.whatsapp.com/send?phone=5571996073520&text=Olá! Quero aproveitar o desconto de 20% na implantação durante a Consulfarma!", "_blank");
+                }}
+              >
+                Garantir Desconto da Consulfarma
+              </Button>
+            </div>
+          </Card>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -134,7 +156,7 @@ const PromotionSection = () => {
         
         <div className="mt-12 text-center">
           <p className="text-sm text-gray-600">
-            * Ofertas válidas até 30/06/2025. Consulte nossos consultores para mais detalhes e condições.
+            * Ofertas válidas até 30/07/2025. Consulte nossos consultores para mais detalhes e condições.
           </p>
         </div>
       </div>
