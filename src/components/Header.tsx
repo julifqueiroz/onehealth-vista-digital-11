@@ -49,7 +49,7 @@ const Header = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <img 
-              src="/lovable-uploads/66fe1e79-9128-48b0-a961-0b278cfe6779.png" 
+              src="/lovable-uploads/652bc1e2-10ef-44a6-b5a8-83b7b1b2053c.png" 
               alt="OneHealth" 
               className="h-10 md:h-12" 
               onError={(e) => {
