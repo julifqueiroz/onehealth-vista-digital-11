@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return (
-    <footer className="bg-onehealth-darkblue text-white pt-16 pb-8 bg-gray-500">
+  return <footer className="bg-onehealth-darkblue text-white pt-16 pb-8 bg-gray-500">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
@@ -63,16 +61,15 @@ const Footer = () => {
       <div className="bg-white text-gray-600 py-4 mt-8">
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm">
-            <p className="mb-1">
+            <p className="mb-1 text-zinc-400">
               <strong>CNPJ:</strong> 59.479.613/0001-04
             </p>
-            <p>
+            <p className="text-gray-400">
               <strong>Razão Social:</strong> MINDTECH SOLUTIONS LTDA
             </p>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
 export default Footer;
