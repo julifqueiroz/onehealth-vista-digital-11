@@ -8,7 +8,6 @@ import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import PromotionSection from '@/components/PromotionSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import WhatsappButton from '@/components/WhatsappButton';
@@ -56,7 +55,6 @@ const Index = () => {
       <FeaturesSection />
       <BenefitsSection />
       <TestimonialsSection />
-      <PromotionSection />
       <ContactSection />
       <Footer />
       <WhatsappButton />
