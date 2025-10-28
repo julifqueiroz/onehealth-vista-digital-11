@@ -124,9 +124,7 @@ const HeroSection = () => {
           }} transition={{
             delay: 0.7,
             duration: 0.6
-          }} className="mt-8 flex items-center gap-3 p-4 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl border-l-4 border-red-500">
-              <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              <p className="text-sm font-semibold text-red-700">Aproveite 20% de desconto na implantação do sistema One Health durante a Confulfarma!</p>
+          }}>
             </motion.div>
           </motion.div>
           
